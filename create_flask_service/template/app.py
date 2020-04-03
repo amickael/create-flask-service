@@ -20,7 +20,7 @@ from controller import api
 
 # Instantiate app
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URL"] = os.environ["YOUR_CONN_STRING_ENV"]
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["YOUR_CONN_STRING_ENV"]
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.wsgi_app = ProxyFix(app.wsgi_app)  # Fixes Swagger UI issues over HTTPS
 

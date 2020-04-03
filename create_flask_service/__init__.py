@@ -48,7 +48,7 @@ class CreateService:
     def install_requirements(self):
         # Install requirements
         subprocess.Popen(
-            " && ".join(
+            "; " if os.name == 'posix' else ' & '.join(
                 [
                     f"source {self.cwd}/venv/bin/activate"
                     if os.name == "posix"

@@ -9,13 +9,16 @@ from halo import Halo
 __author__ = "Andrew Mickael"
 __version__ = "0.0.1"
 
+TEMPLATE_DIR = 'template'
+PLACEHOLDER = '{{ %SERVICE_NAME% }}'
+
 
 class CreateService:
     def __init__(self, service_name: str, root_dir: str):
-        self.service_name = service_name
+        self.service_name = "-".join(service_name.split(" "))
         self.root_dir = root_dir
         self.template_dir = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), "template"
+            os.path.dirname(os.path.abspath(__file__)), TEMPLATE_DIR
         )
 
         # Check if service directory already exists, if it does then prompt for overwrite
@@ -71,12 +74,23 @@ class CreateService:
 
         return self
 
+    def __placeholder(self, file_name: str):
+        file_path = os.path.join(self.cwd, file_name)
+        with open(file_path, 'r', encoding='utf-8') as f:
+            text = f.read().replace(PLACEHOLDER, self.service_name)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(text)
+
+    def personalize(self):
+        self.__placeholder('README.md')
+        self.__placeholder(os.path.join('controller', '__init__.py'))
+
 
 def main():
     try:
         # Prompt input
-        service_name = "-".join(input("Service name: ").split(" "))
-        root_dir = input("Root directory (Blank for current directory): ")
+        service_name = input("Service name: ")
+        root_dir = input("Root directory (blank for current directory): ")
         service = CreateService(service_name, root_dir)
 
         # Create file structure
@@ -98,6 +112,11 @@ def main():
         # Initialize git
         spinner.start('Initializing git repository')
         service.initialize_git()
+        spinner.succeed()
+
+        # Personalize
+        spinner.start('Personalizing')
+        service.personalize()
         spinner.succeed()
 
         # Done!

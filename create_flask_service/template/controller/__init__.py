@@ -10,7 +10,7 @@ from marshmallow import ValidationError
 
 VERSION = "v1"
 api = Api(
-    title="Your Service",
+    title="{{ %SERVICE_NAME% }}",
     version=VERSION,
     prefix=f"/api/{VERSION}",
     doc="/" if os.getenv("FLASK_ENV") == "development" else False,

@@ -6,13 +6,18 @@ Set up a Flask microservice with a few keystrokes
 * [Git SCM](https://git-scm.com/downloads)
 
 ## 🛠️ Installation
-Install from PyPI using `pip`
+Install from PyPI using `pip`, you may need to use `pip3` depending on your installation
 ```bash
 $ pip install create-flask-service
 ```
 
 ## 🚀 Usage
 ![Demo](https://github.com/amickael/create-flask-service/blob/master/animation.svg)
+
+1. Run the `create-flask-service` command
+2. Enter your new project name, note that spaces will be converted to dashes
+3. Enter the root directory for your new project, if none is supplied then the current directory is used
+4. Watch the magic happen
 
 That's honestly all there is to it!
 

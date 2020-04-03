@@ -7,7 +7,7 @@ from halo import Halo
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.0.10"
+__version__ = "0.0.11"
 
 TEMPLATE_DIR = "template"
 PLACEHOLDER = "{{ %SERVICE_NAME% }}"
@@ -60,6 +60,7 @@ class CreateService:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             shell=True,
+            executable="/bin/bash" if os.name == "posix" else None,
         ).communicate()
 
         return self

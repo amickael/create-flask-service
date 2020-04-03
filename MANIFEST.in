@@ -1,0 +1,1 @@
+recursive-include create_flask_service/template *

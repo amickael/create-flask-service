@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/issues) [![GitHub license](https://img.shields.io/github/license/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/blob/master/LICENSE) [![PyPI](https://img.shields.io/badge/PyPI-create--flask--service-blue)](https://pypi.org/project/create-flask-service/)
+
 # create-flask-service
 Set up a Flask microservice with a few keystrokes
 
@@ -67,3 +69,6 @@ That's honestly all there is to it!
 * Initialized git repository with a Python-specific .gitignore file
   * Nothing will be committed automatically
 * Basic README.md file
+
+## License
+MIT © 2020 [Andrew Mickael](https://github.com/amickael)

@@ -7,7 +7,7 @@ from halo import Halo
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 TEMPLATE_DIR = "template"
 PLACEHOLDER = "{{ %SERVICE_NAME% }}"
@@ -48,7 +48,7 @@ class CreateService:
     def install_requirements(self):
         # Install requirements
         subprocess.Popen(
-            "; " if os.name == 'posix' else ' & '.join(
+            " && ".join(
                 [
                     f"source {self.cwd}/venv/bin/activate"
                     if os.name == "posix"

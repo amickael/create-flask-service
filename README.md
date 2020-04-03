@@ -58,7 +58,7 @@ That's honestly all there is to it!
       * Note that this is only needed for Python <3.7
 * Basic Flask and Flask-RestX configuration
     * app.py contains basic configuration setting up Flask, Flask-SQLAlchemy, CORS, and gzip compression
-    * controller/\__init__.py contains basic Flask-RestX configuration based on the [Flask-RestX guidelines](https://flask-restx.readthedocs.io/en/latest/scaling.html)
+    * controller/\_\_init\_\_.py contains basic Flask-RestX configuration based on the [Flask-RestX guidelines](https://flask-restx.readthedocs.io/en/latest/scaling.html)
 * Initialized git repository with a Python-specific .gitignore file
   * Nothing will be committed automatically
 * Basic README.md file

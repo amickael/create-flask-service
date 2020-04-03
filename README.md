@@ -14,7 +14,7 @@ $ pip install create-flask-service
 ```
 
 ## 🚀 Usage
-![Demo](https://github.com/amickael/create-flask-service/blob/master/animation.svg)
+![Demo](https://github.com/amickael/create-flask-service/blob/master/demo.gif)
 
 1. Run the `create-flask-service` command
 2. Enter your new project name, note that spaces will be converted to dashes

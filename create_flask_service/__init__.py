@@ -9,8 +9,8 @@ from halo import Halo
 __author__ = "Andrew Mickael"
 __version__ = "0.0.1"
 
-TEMPLATE_DIR = 'template'
-PLACEHOLDER = '{{ %SERVICE_NAME% }}'
+TEMPLATE_DIR = "template"
+PLACEHOLDER = "{{ %SERVICE_NAME% }}"
 
 
 class CreateService:
@@ -76,14 +76,14 @@ class CreateService:
 
     def __placeholder(self, file_name: str):
         file_path = os.path.join(self.cwd, file_name)
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             text = f.read().replace(PLACEHOLDER, self.service_name)
-        with open(file_path, 'w', encoding='utf-8') as f:
+        with open(file_path, "w", encoding="utf-8") as f:
             f.write(text)
 
     def personalize(self):
-        self.__placeholder('README.md')
-        self.__placeholder(os.path.join('controller', '__init__.py'))
+        self.__placeholder("README.md")
+        self.__placeholder(os.path.join("controller", "__init__.py"))
 
 
 def main():
@@ -94,33 +94,33 @@ def main():
         service = CreateService(service_name, root_dir)
 
         # Create file structure
-        spinner = Halo(text='Creating file structure')
+        spinner = Halo(text="Creating file structure")
         spinner.start()
         service.create_tree()
         spinner.succeed()
 
         # Generate venv
-        spinner.start('Generating virtual environment')
+        spinner.start("Generating virtual environment")
         service.generate_venv()
         spinner.succeed()
 
         # Activate venv and install requirements
-        spinner.start('Installing requirements')
+        spinner.start("Installing requirements")
         service.install_requirements()
         spinner.succeed()
 
         # Initialize git
-        spinner.start('Initializing git repository')
+        spinner.start("Initializing git repository")
         service.initialize_git()
         spinner.succeed()
 
         # Personalize
-        spinner.start('Personalizing')
+        spinner.start("Personalizing")
         service.personalize()
         spinner.succeed()
 
         # Done!
-        spinner.stop_and_persist("🎂".encode('utf-8'), 'All done!')
+        spinner.stop_and_persist("🎂".encode("utf-8"), "All done!")
         print("Your new project is located in:", os.path.abspath(service.cwd), sep="\t")
     except (KeyboardInterrupt, SystemExit):
         pass

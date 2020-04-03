@@ -12,6 +12,7 @@ $ pip install create-flask-service
 ```
 
 ## 🚀 Usage
+![Demo](https://raw.githubusercontent.com/amickael/create-flask-service/master/demo.svg)
 TBD
 
 ## 📦 What's in the box

@@ -17,4 +17,5 @@ setup(
     entry_points={
         "console_scripts": ["create-flask-service = create_flask_service:main"]
     },
+    install_requires=["halo"],
 )

@@ -22,7 +22,7 @@ class CreateService:
         )
 
         # Check if service directory already exists, if it does then prompt for overwrite
-        self.cwd = os.path.join(root_dir, service_name)
+        self.cwd = os.path.join(self.root_dir, self.service_name)
         if os.path.exists(self.cwd):
             proceed = input("Directory already exists, overwrite? [y/N]: ")
             if proceed.lower() == "y":

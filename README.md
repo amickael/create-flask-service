@@ -1,4 +1,4 @@
-[![GitHub issues](https://img.shields.io/github/issues/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/issues) [![GitHub license](https://img.shields.io/github/license/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/blob/master/LICENSE) [![PyPI](https://img.shields.io/badge/PyPI-create--flask--service-blue)](https://pypi.org/project/create-flask-service/)
+[![GitHub issues](https://img.shields.io/github/issues/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/issues) [![GitHub license](https://img.shields.io/github/license/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/blob/master/LICENSE) [![PyPI](https://img.shields.io/badge/PyPI-create--flask--service-blue)](https://pypi.org/project/create-flask-service/) [![Code style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
 
 # create-flask-service
 Set up a Flask microservice with a few keystrokes
@@ -21,7 +21,7 @@ $ pip install create-flask-service
 3. Enter the root directory for your new project, if none is supplied then the current directory is used
 4. Watch the magic happen
 
-To start the application run app.py and navigate to http://127.0.0.1:5000, you should see a blank Swagger UI page. Note that in certain IDEs like PyCharm you may need to set your working directory to the project root, this will ensure that the .env file is loaded before runtime.
+To start the application run `app.py` and navigate to http://127.0.0.1:5000, you should see a blank Swagger UI page. Note that in certain IDEs like PyCharm you may need to set your working directory to the project root, this will ensure that the .env file is loaded before runtime.
 
 ## 📦 What's in the box
 * Boilerplate directory structure. Adapted from [a guide by AJ Pryor](http://alanpryorjr.com/2019-05-20-flask-api-example/), author of the excellent [flask_accepts](https://github.com/apryor6/flask_accepts) library (included)
@@ -66,6 +66,7 @@ To start the application run app.py and navigate to http://127.0.0.1:5000, you s
 * Basic Flask and Flask-RestX configuration
     * app.py contains basic configuration setting up Flask, Flask-SQLAlchemy, CORS, and gzip compression
     * controller/\_\_init\_\_.py contains basic Flask-RestX configuration based on the [Flask-RestX guidelines](https://flask-restx.readthedocs.io/en/latest/scaling.html)
+    * Boilerplate code style is formatted with [Black](https://github.com/psf/black), but you may use whatever style suits you
 * Initialized git repository with a Python-specific .gitignore file
   * Nothing will be committed automatically
 * Basic README.md file

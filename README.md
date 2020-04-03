@@ -13,7 +13,8 @@ $ pip install create-flask-service
 
 ## 🚀 Usage
 ![Demo](https://github.com/amickael/create-flask-service/blob/master/animation.svg)
-TBD
+
+That's honestly all there is to it!
 
 ## 📦 What's in the box
 * Boilerplate directory structure. Adapted from [a guide by AJ Pryor](http://alanpryorjr.com/2019-05-20-flask-api-example/), author of the excellent [flask_accepts](https://github.com/apryor6/flask_accepts) library (included)

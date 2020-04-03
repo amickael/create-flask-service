@@ -7,7 +7,7 @@ from halo import Halo
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 
 TEMPLATE_DIR = "template"
 PLACEHOLDER = "{{ %SERVICE_NAME% }}"

@@ -71,5 +71,5 @@ To start the application run `app.py` and navigate to http://127.0.0.1:5000, you
   * Nothing will be committed automatically
 * Basic README.md file
 
-## License
-MIT © 2020 [Andrew Mickael](https://github.com/amickael)
+## ⚖️ License
+[MIT © 2020 Andrew Mickael](https://github.com/amickael/create-flask-service/blob/master/LICENSE)

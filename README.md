@@ -55,7 +55,9 @@ TBD
     * [pyodbc](https://github.com/mkleehammer/pyodbc) - Python ODBC bridge
     * [typing-extensions](https://github.com/python/typing/tree/master/typing_extensions)
       * Note that this is only needed for Python <3.7
+* Basic Flask and Flask-RestX configuration
+    * app.py contains basic configuration setting up Flask, Flask-SQLAlchemy, CORS, and gzip compression
+    * controller/__init__.py contains basic Flask-RestX configuration based on the [Flask-RestX guidelines](https://flask-restx.readthedocs.io/en/latest/scaling.html)
 * Initialized git repository with a Python-specific .gitignore file
   * Nothing will be committed automatically
-
-### Basic README.md file
+* Basic README.md file

@@ -1,20 +1,20 @@
 # create-flask-service
 Set up a Flask microservice with a few keystrokes
 
-## Dependencies
+## 👶 Dependencies
 * [Python 3.6 or higher](https://www.python.org/downloads/)
 * [Git SCM](https://git-scm.com/downloads)
 
-## Installation
+## 🛠️ Installation
 Install from PyPI using `pip`
 ```bash
 $ pip install create-flask-service
 ```
 
-## Usage
+## 🚀 Usage
 TBD
 
-## What's in the box
+## 📦 What's in the box
 * Python virtual environment with the following libraries installed, remember to activate the environment before developing
   * [flask](https://github.com/pallets/flask) - The Python micro framework for building web applications
   * [flask-restx](https://github.com/python-restx/flask-restx) - Fully featured framework for fast, easy and documented API development with Flask

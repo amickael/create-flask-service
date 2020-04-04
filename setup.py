@@ -22,7 +22,7 @@ setup(
     entry_points={
         "console_scripts": ["create-flask-service = create_flask_service:main"]
     },
-    install_requires=["halo"],
+    install_requires=["halo", "requests"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

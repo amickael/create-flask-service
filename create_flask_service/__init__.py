@@ -1,13 +1,26 @@
 import argparse
 
 from halo import Halo
+import requests
 
 from create_flask_service.Service import Service
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 __description__ = "Create a Flask microservice with a few keystrokes"
+
+
+def check_version(verbose: bool = False):
+    resp = requests.get("https://pypi.org/pypi/create-flask-service/json")
+    if resp.ok:
+        latest_version = resp.json().get("info", {}).get("version", "")
+        if latest_version != __version__ or verbose:
+            print(
+                f"A newer version of create-flask-service is available on PyPI ({__version__} => {latest_version})",
+                'Run "pip install --upgrade create-flask-service" to update',
+                sep="\r\n",
+            )
 
 
 def run():
@@ -66,6 +79,7 @@ def main():
             run()
         except (KeyboardInterrupt, SystemExit):
             pass
+    check_version()
 
 
 if __name__ == "__main__":

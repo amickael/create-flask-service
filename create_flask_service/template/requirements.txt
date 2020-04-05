@@ -9,4 +9,5 @@ marshmallow
 python-jose
 werkzeug
 pyodbc
+pytest
 typing-extensions

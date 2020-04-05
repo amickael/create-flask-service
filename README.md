@@ -72,6 +72,7 @@ To start the application run `app.py` and navigate to http://127.0.0.1:5000, you
     * [werkzeug](https://github.com/pallets/werkzeug) - The comprehensive WSGI web application library
     * [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy) - The Database Toolkit for Python
     * [pyodbc](https://github.com/mkleehammer/pyodbc) - Python ODBC bridge
+    * [pytest](https://github.com/pytest-dev/pytest) - The pytest framework makes it easy to write small tests, yet scales to support complex functional testing
     * [typing-extensions](https://github.com/python/typing/tree/master/typing_extensions)
       * Note that this is only needed for Python <3.7
 * Basic Flask and Flask-RestX configuration

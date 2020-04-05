@@ -2,6 +2,7 @@ import os
 import subprocess
 import shutil
 import sys
+import stat
 
 import requests
 
@@ -10,7 +11,7 @@ from create_flask_service.GlobalEnum import GlobalEnum
 
 class Service:
     def __init__(self, service_name: str, root_dir: str):
-        self.service_name = "-".join(service_name.split(" "))
+        self.service_name = service_name
         self.root_dir = root_dir
         self.executable = "/bin/bash" if os.name == "posix" else None
         self.template_dir = os.path.join(
@@ -22,7 +23,11 @@ class Service:
         if os.path.exists(self.cwd):
             proceed = input("Directory already exists, overwrite? [y/N]: ")
             if proceed.lower() == "y":
-                shutil.rmtree(self.cwd)
+                try:
+                    shutil.rmtree(self.cwd)
+                except (PermissionError, WindowsError):
+                    os.chmod(self.cwd, stat.S_IWUSR)
+                    shutil.rmtree(self.cwd)
             else:
                 print("Stopping")
                 exit()

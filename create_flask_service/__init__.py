@@ -6,7 +6,7 @@ from create_flask_service.Service import Service
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __description__ = "Create a Flask microservice with a few keystrokes"
 
 

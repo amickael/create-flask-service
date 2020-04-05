@@ -26,7 +26,11 @@ class Service:
                 try:
                     shutil.rmtree(self.cwd)
                 except (PermissionError, WindowsError):
-                    os.chmod(self.cwd, stat.S_IWUSR)
+                    for root, dirs, files in os.walk(self.cwd):
+                        for directory in dirs:
+                            os.chmod(os.path.join(root, directory), stat.S_IWUSR)
+                        for file in files:
+                            os.chmod(os.path.join(root, file), stat.S_IWUSR)
                     shutil.rmtree(self.cwd)
             else:
                 print("Stopping")

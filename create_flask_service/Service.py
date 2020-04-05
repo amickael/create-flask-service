@@ -18,7 +18,7 @@ class Service:
         )
 
         # Check if service directory already exists, if it does then prompt for overwrite
-        self.cwd = os.path.join(self.root_dir, self.service_name)
+        self.cwd = os.path.abspath(os.path.join(self.root_dir, self.service_name))
         if os.path.exists(self.cwd):
             proceed = input("Directory already exists, overwrite? [y/N]: ")
             if proceed.lower() == "y":
@@ -72,7 +72,7 @@ class Service:
                 [
                     f"source {self.cwd}/venv/bin/activate"
                     if os.name == "posix"
-                    else fr"{self.cwd}\Scripts\activate.bat",
+                    else fr"{self.cwd}\venv\Scripts\activate.bat",
                     f"pip install -r {self.cwd}{os.path.sep}requirements.txt",
                     "deactivate",
                 ]

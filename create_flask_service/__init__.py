@@ -6,7 +6,7 @@ from create_flask_service.Service import Service
 
 
 __author__ = "Andrew Mickael"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 def main():
@@ -44,7 +44,7 @@ def main():
 
         # Done!
         spinner.stop_and_persist("🎂".encode("utf-8"), "All done!")
-        print("Your new project is located in:", os.path.abspath(service.cwd), sep="\t")
+        print("Your new project is located in:", service.cwd, sep="\t")
     except (KeyboardInterrupt, SystemExit):
         pass
 

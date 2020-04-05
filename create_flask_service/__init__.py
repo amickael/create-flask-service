@@ -13,11 +13,11 @@ __description__ = "Create a Flask microservice with a few keystrokes"
 def run():
     # Prompt input
     while True:
-        service_name = input("Service name: ").strip().replace(' ', '-')
+        service_name = input("Service name: ").strip().replace(" ", "-")
         if service_name:
             break
         else:
-            print('Please enter a service name')
+            print("Please enter a service name")
     root_dir = input("Root directory (blank for current directory): ")
     service = Service(service_name, root_dir)
 
@@ -55,12 +55,12 @@ def run():
 def main():
     # Set up args
     parser = argparse.ArgumentParser(description=__description__)
-    parser.add_argument('-V', action='store_true', help='Display version')
+    parser.add_argument("-V", action="store_true", help="Display version")
     args = parser.parse_args()
 
     # Run
     if args.V is True:
-        print("create-flask-service", __version__, sep='==')
+        print("create-flask-service", __version__, sep="==")
     else:
         try:
             run()

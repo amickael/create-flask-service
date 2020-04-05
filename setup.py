@@ -5,7 +5,7 @@ import create_flask_service
 with open("README.md", "r") as f:
     readme = f.read()
 
-with open("requirements.txt", 'r') as f:
+with open("requirements.txt", "r") as f:
     requirements = [i.rstrip() for i in f.readlines()]
 
 setup(

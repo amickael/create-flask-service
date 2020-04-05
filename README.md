@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/issues)
-[![GitHub license](https://img.shields.io/github/license/amickael/create-flask-service)](https://github.com/amickael/create-flask-service/blob/master/LICENSE)
 ![PyPI](https://img.shields.io/pypi/v/create-flask-service?color=blue)
-![PyPI - Downloads](https://img.shields.io/pypi/dw/create-flask-service?color=darkgreen)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/create-flask-service?color=red)
+[![GitHub license](https://img.shields.io/github/license/amickael/create-flask-service?color=purple)](https://github.com/amickael/create-flask-service/blob/master/LICENSE)
 [![Code style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
 
 # create-flask-service

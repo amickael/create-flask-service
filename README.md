@@ -27,6 +27,13 @@ $ pip install create-flask-service
 
 To start the application run `app.py` and navigate to http://127.0.0.1:5000, you should see a blank Swagger UI page. Note that in certain IDEs like PyCharm you may need to set your working directory to the project root, this will ensure that the .env file is loaded before runtime.
 
+## ⚙️ Command Line Arguments
+> Note that supplying arguments will not run the main program
+
+| Name    | Argument | Description                      | Default |
+|---------|----------|----------------------------------|---------|
+| Version | -V       | Display installed version number | False   |
+
 ## 📦 What's in the box
 * Boilerplate directory structure. Adapted from [a guide by AJ Pryor](http://alanpryorjr.com/2019-05-20-flask-api-example/), author of the excellent [flask_accepts](https://github.com/apryor6/flask_accepts) library (included)
 ```

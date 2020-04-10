@@ -7,6 +7,8 @@
 # create-flask-service
 Set up a Flask microservice with a few keystrokes
 
+![create-flask-service](https://repository-images.githubusercontent.com/252598272/c0646200-75c6-11ea-90dd-94cb96cbb2de)
+
 ## 👶 Dependencies
 * [Python 3.6 or higher](https://www.python.org/downloads/)
 * [Git SCM](https://git-scm.com/downloads)

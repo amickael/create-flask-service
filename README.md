@@ -15,8 +15,8 @@ Set up a Flask microservice with a few keystrokes
 
 ## 🛠️ Installation
 Install from PyPI using `pip`, you may need to use `pip3` depending on your installation
-```bash
-$ pip install create-flask-service
+```sh
+pip install create-flask-service
 ```
 
 ## 🚀 Usage

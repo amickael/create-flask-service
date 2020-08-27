@@ -5,7 +5,7 @@
 [![Code style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
 
 # create-flask-service
-Set up a Flask microservice with a few keystrokes
+Set up a Flask service with a few keystrokes
 
 ![create-flask-service](https://repository-images.githubusercontent.com/252598272/c0646200-75c6-11ea-90dd-94cb96cbb2de)
 
